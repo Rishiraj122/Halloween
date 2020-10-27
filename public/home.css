@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    padding-top: 2%;
+    text-align: center;
+}
+
+.image1 {
+    width: 100%;
+    background-color: skyblue;
+    text-align: center;
+    padding-top: 5%;
+    animation: sky 8s infinite alternate;
+    font-family: 'Henny Penny', cursive;
+    color: orange;
+}
+
+.image3 {
+    padding-top: 45%;
+    font-family: 'Henny Penny', cursive;
+    color: green;
+    margin-bottom: -30%;
+}
+
+.image2 {
+    width: 100%;
+    text-align: center;
+    margin-top: -50%;
+}
+
+.image4 {
+    margin-top: -35%;
+    text-align: center;
+    font-family: 'Henny Penny', cursive;
+}
+
+#stars {
+    animation: star 20s ease infinite alternate;
+    transform-origin: bottom;
+}
+
+#birds {
+    animation: bird 0.5s ease infinite alternate;
+    transform-origin: center;
+}
+
+#ghost {
+    animation: ghosts 15s ease alternate;
+}
+
+#eye {
+    animation: eyes 2s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.face {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both infinite;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes bird {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(30deg);
+    }
+}
+
+@keyframes star {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(20deg);
+    }
+}
+
+@keyframes sky {
+    from {
+        background-color: rgb(102, 117, 122);
+    }
+    to {
+        background-color: #342e2e;
+    }
+}
+
+@keyframes ghosts {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+@keyframes eyes {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
