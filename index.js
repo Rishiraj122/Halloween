@@ -6,6 +6,10 @@ app.get("/", function(req, res) {
     res.render("home.ejs");
 });
 
+app.get("/games", function(req, res) {
+    res.render("game.ejs");
+});
+
 app.listen(process.env.PORT, process.env.IP, function() {
     console.log("The Server has been started");
 });
